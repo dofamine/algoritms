@@ -1,3 +1,108 @@
+const inputData = [
+  {
+    id: 6,
+    parentId: 4,
+    label: "popup settings",
+  },
+  {
+    id: 77,
+    parentId: 4,
+    label: "popups gops",
+  },
+  {
+    id: 5,
+    parentId: 2,
+    displayName: "Chatbot Title",
+  },
+  {
+    id: 1,
+    parentId: null,
+    displayName: "clone all fields",
+  },
+  {
+    id: 7,
+    parentId: 6,
+    displayName: "Test popup setting child",
+  },
+  {
+    id: 2,
+    parentId: 1,
+    displayName: "Chatbot Settings",
+  },
+  {
+    id: 3,
+    parentId: 1,
+    displayName: "Chatbot Colors",
+  },
+  {
+    id: 4,
+    parentId: 1,
+    displayName: "Floating Action Button Settings",
+  },
+  {
+    id: 22,
+    parentId: null,
+    displayName: "test",
+  }
+];
+
+const outputData = [
+  {
+    id: 1,
+    parentId: null,
+    displayName: "clone all fields",
+    children: [
+      {
+        id: 2,
+        parentId: 1,
+        displayName: "Chatbot Settings",
+        children: [
+          {
+            id: 5,
+            parentId: 2,
+            displayName: "Chatbot Title",
+          }
+        ]
+      },
+      {
+        id: 3,
+        parentId: 1,
+        displayName: "Chatbot Colors",
+      },
+      {
+        id: 4,
+        parentId: 1,
+        displayName: "Floating Action Button Settings",
+        children: [
+          {
+            id: 6,
+            parentId: 4,
+            label: "popup settings",
+            children: [
+              {
+                id: 7,
+                parentId: 6,
+                displayName: "Test popup setting child",
+              },
+            ]
+          },
+          {
+            id: 77,
+            parentId: 4,
+            label: "popups gops",
+          },
+        ]
+      },
+    ]
+  },
+  {
+    id: 22,
+    parentId: null,
+    displayName: "test",
+  }
+];
+
+
 interface ITreeNode {
   id: number;
   parentId: number;
